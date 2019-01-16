@@ -143,10 +143,10 @@ class InstaRobot:
                 time.sleep(3)
 
 
-myIG = InstaRobot("your_instagram_login", "your_instagram_password")
-myIG.login()
-myIG.find_photos('hashtag')  # type whatever you like, apple, car, etc
-myIG.my_followers()
-myIG.am_following()
-myIG.accounts_to_unfollow()
+user1 = InstaRobot("your_instagram_login", "your_instagram_password")
+user1.login()
+user1.find_photos('hashtag')  # type whatever you like, apple, car, etc
+user1.my_followers()
+user1.am_following()
+user1.accounts_to_unfollow()
 
