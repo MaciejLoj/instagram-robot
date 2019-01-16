@@ -18,8 +18,9 @@ The main purpose of the project is to help my friend to boost popularity of her 
 Bot should also work on other versions so just download mentioned programs and run the
 code in your IDE
 ## Setup
+Firstly clone/fork repo [https://github.com/MaciejLoj/InstagramROBOT.git](https://github.com/MaciejLoj/InstagramROBOT.git)
 
- All you need to do is to have Python, Selenium and GeckoDriver installed.
+ Then all you need to do is to have Python, Selenium and GeckoDriver installed.
 
  If you do not have Selenium, Python 3.6 has pip available in the standard library
  so you can install it easily:
