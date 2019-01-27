@@ -154,8 +154,7 @@ class InstaRobot:
             title = element.get_property('title')
             if title in dictionary_to_unfollow:
                 time.sleep(2)
-                driver.find_element_by_xpath(('/html/body/div[2]/div/div/div[2]/ul/div/li['
-                                              + str(dictionary_to_unfollow[title])+']/div/div[3]/button')).click()
+                driver.find_element_by_xpath(('/html/body/div[2]/div/div/div[2]/ul/div/li['+str(dictionary_to_unfollow[title])+']/div/div[2]/button')).click()
                 time.sleep(3)
                 driver.find_element_by_xpath('/html/body/div[3]/div/div/div/div[3]/button[1]').click()
                 time.sleep(3)
@@ -168,7 +167,7 @@ user1 = InstaRobot("your_login", "your_password")
 """Using class methods to initate the bot"""
 
 user1.login()
-user1.find_photos('hashtag_you_want')
+user1.find_photos('put_hashtag_you_want')
 user1.my_followers()
 user1.am_following()
 user1.accounts_to_unfollow()
