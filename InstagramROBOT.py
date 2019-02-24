@@ -100,7 +100,7 @@ class InstaRobot:
                 if title not in all_followers:
                     all_followers.append(title)
             for _ in range(5):
-                driver.find_element_by_xpath('/html/body/div[2]/div/div/div[2]').send_keys(Keys.ARROW_DOWN)
+                driver.find_element_by_xpath('/html/body/div[2]/div/div[2]').send_keys(Keys.ARROW_DOWN)
             time.sleep(1)
         print(all_followers)
 
@@ -124,7 +124,7 @@ class InstaRobot:
                 if title not in all_followings:
                     all_followings.append(title)
             for _ in range(5):
-                driver.find_element_by_xpath('/html/body/div[2]/div/div/div[2]').send_keys(Keys.ARROW_DOWN)
+                driver.find_element_by_xpath('/html/body/div[2]/div/div[2]').send_keys(Keys.ARROW_DOWN)
             time.sleep(1)
         print(all_followings)
 
@@ -147,14 +147,14 @@ class InstaRobot:
         window_followings = driver.find_element_by_xpath('/html/body/span/section/main/div/header/section/ul/li[3]/a')
         window_followings.click()
         for _ in range(int(amount_my_followings)):
-            driver.find_element_by_xpath('/html/body/div[2]/div/div/div[2]').send_keys(Keys.ARROW_DOWN)
+            driver.find_element_by_xpath('/html/body/div[2]/div/div[2]').send_keys(Keys.ARROW_DOWN)
             time.sleep(1)
         visible_followings = driver.find_elements_by_class_name("FPmhX")
         for element in visible_followings:
             title = element.get_property('title')
             if title in dictionary_to_unfollow:
                 time.sleep(2)
-                driver.find_element_by_xpath(('/html/body/div[2]/div/div/div[2]/ul/div/li['+str(dictionary_to_unfollow[title])+']/div/div[2]/button')).click()
+                driver.find_element_by_xpath(('/html/body/div[2]/div/div[2]/ul/div/li['+str(dictionary_to_unfollow[title])+']/div/div[3]/button')).click()
                 time.sleep(3)
                 driver.find_element_by_xpath('/html/body/div[3]/div/div/div/div[3]/button[1]').click()
                 time.sleep(3)
@@ -167,7 +167,7 @@ user1 = InstaRobot("your_login", "your_password")
 """Using class methods to initate the bot"""
 
 user1.login()
-user1.find_photos('put_hashtag_you_want')
+user1.find_photos('give_your_hashtag')
 user1.my_followers()
 user1.am_following()
 user1.accounts_to_unfollow()
