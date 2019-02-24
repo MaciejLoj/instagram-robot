@@ -154,9 +154,9 @@ class InstaRobot:
             title = element.get_property('title')
             if title in dictionary_to_unfollow:
                 time.sleep(2)
-                driver.find_element_by_xpath(('/html/body/div[2]/div/div[2]/ul/div/li['+str(dictionary_to_unfollow[title])+']/div/div[3]/button')).click()
+                driver.find_element_by_xpath(('/html/body/div[2]/div/div[2]/ul/div/li['+str(dictionary_to_unfollow[title])+']/div/div[2]/button')).click()
                 time.sleep(3)
-                driver.find_element_by_xpath('/html/body/div[3]/div/div/div/div[3]/button[1]').click()
+                driver.find_element_by_xpath('/html/body/div[3]/div/div/div[3]/button[1]').click()
                 time.sleep(3)
 
 
